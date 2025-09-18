@@ -33,6 +33,10 @@ environment {
     // DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     EDITOR "nvim"
+    XMODIFIERS "@im=fcitx"
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx"
+
 }
 animations {
 }
