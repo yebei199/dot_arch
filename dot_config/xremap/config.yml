@@ -1,0 +1,16 @@
+modmap:
+  - name: basic-remap
+    remap:
+      CapsLock: leftctrl
+      rightalt: Esc
+      leftalt: leftmeta
+      leftmeta: leftalt
+
+keymap:
+  - name: ctrl-alt-to-arrows
+    remap:
+      leftmeta-leftctrl-h: left
+      leftmeta-leftctrl-l: right
+      leftmeta-leftctrl-j: down
+      leftmeta-leftctrl-k: up
+
