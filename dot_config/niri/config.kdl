@@ -81,11 +81,11 @@ layer-rule {
 }
 layer-rule {
     match namespace="^waybar$"
-    opacity 0.55
+    opacity 0.75
 }
 layer-rule {
     match namespace="^dms$"
-    opacity 0.55
+    opacity 0.85
 }
 
 layout {
