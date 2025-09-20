@@ -1,10 +1,10 @@
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-sh-at-startup "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-at-startup "dms" "run"
-spawn-sh-at-startup "xremap ~/.config/xremap/config.yml"
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "/opt/v2rayn-bin/v2rayN"
+spawn-sh-at-startup "pgrep -x xremap >/dev/null || xremap ~/.config/xremap/config.yml"
     
 config-notification {
     disable-failed
@@ -19,7 +19,6 @@ overview {
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-workspace "dev"
 
 cursor {
     hide-after-inactive-ms 1000
@@ -96,8 +95,8 @@ layout {
     background-color "transparent"
     gaps 4
     always-center-single-column
-    center-focused-column "always"
-    // center-focused-column "never"
+    // center-focused-column "always"
+    center-focused-column "never"
 
     preset-column-widths {
         proportion 0.5
@@ -202,9 +201,7 @@ binds {
       spawn "dms" "ipc" "call" "night" "toggle";
    }
 
-    Mod+T             hotkey-overlay-title="Open a Terminal: kitty"                  { spawn "kitty"; }
-    Mod+Ctrl+Q        hotkey-overlay-title="Lock the Screen: hyprlock"              { spawn "hyprlock"; }
-    Ctrl+Shift+Escape hotkey-overlay-title="Open a System monitor: Mission Control" { spawn "flatpak" "run" "io.missioncenter.MissionCenter"; }
+    Mod+T   hotkey-overlay-title="Open a Terminal: kitty"      { spawn "kitty"; }
 
     Mod+Q { close-window; }
 
@@ -216,6 +213,8 @@ binds {
     Mod+J     { focus-window-or-workspace-down; }
     Mod+K     { focus-window-or-workspace-up; }
     Mod+L     { focus-column-right; }
+
+    Mod+I  hotkey-overlay-title="center col"   {center-column;}
 
 
     Mod+Home { focus-column-first; }
@@ -251,26 +250,6 @@ binds {
     Mod+Shift+WheelScrollRight { move-column-right; }
     Mod+Shift+WheelScrollLeft  { move-column-left; }
 
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
-    Mod+0 { focus-workspace 10; }
-    Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
-    Mod+Shift+5 { move-column-to-workspace 5; }
-    Mod+Shift+6 { move-column-to-workspace 6; }
-    Mod+Shift+7 { move-column-to-workspace 7; }
-    Mod+Shift+8 { move-column-to-workspace 8; }
-    Mod+Shift+9 { move-column-to-workspace 9; }
-    Mod+Shift+0 { move-column-to-workspace 10; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
@@ -307,7 +286,29 @@ binds {
 
     Mod+Escape { quit; }
     Mod+Shift+Q { power-off-monitors; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
 }
+
 gestures {
     hot-corners {
         off
