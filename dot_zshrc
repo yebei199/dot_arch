@@ -1,0 +1,17 @@
+# Arch + oh-my-zsh（系统包）
+export ZSH=/usr/share/oh-my-zsh
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+fpath+=(/usr/share/zsh/site-functions)
+autoload -Uz compinit
+compinit
+
+# Plugins (system packages)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Keep this as last
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+eval "$(starship init zsh)"
