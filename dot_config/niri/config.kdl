@@ -21,7 +21,7 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 cursor {
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 5000
     // xcursor-theme ""
     // xcursor-size 24
 }
@@ -35,6 +35,11 @@ environment {
     XMODIFIERS "@im=fcitx"
     GTK_IM_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
+
+    http_proxy "http://127.0.0.1:7897"
+    https_proxy "http://127.0.0.1:7897"
+    all_proxy "socks5://127.0.0.1:7897"
+     
 
 }
 animations {
@@ -55,8 +60,11 @@ input {
     trackpoint {
     }
 
+
     warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="95%"
+    focus-follows-mouse max-scroll-amount="100%"
+      workspace-auto-back-and-forth
+
 }
 
 output "DP-4" {
@@ -73,6 +81,12 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    match title="^*-float$"
+    open-floating true
+    default-column-width  { fixed 1280; }
+    default-window-height { fixed 720; }
+}
 
 layer-rule {
     match namespace="^swww-daemon$"
@@ -134,24 +148,17 @@ layout {
 
 
 
-window-rule {
-    match title="^*-float$"
-    open-floating true
-    default-column-width  { fixed 1280; }
-    default-window-height { fixed 720; }
-}
 
-window-rule {
-    match app-id=r#"^org\.gnome\.Calculator$"#
-
-    open-floating true
-    default-column-width  { fixed 400; }
-    default-window-height { fixed 656; }
-}
-window-rule {
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    block-out-from "screen-capture"
-}
+// window-rule {
+//     match app-id=r#"^org\.gnome\.Calculator$"#
+//     open-floating true
+//     default-column-width  { fixed 400; }
+//     default-window-height { fixed 656; }
+// }
+// window-rule {
+//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
+//     block-out-from "screen-capture"
+// }
 
 
 binds {
