@@ -82,11 +82,16 @@ window-rule {
 }
 
 window-rule {
-    match title="^*-float$"
-    open-floating true
-    default-column-width  { fixed 1280; }
-    default-window-height { fixed 720; }
+    match title="^(WebStorm|Pycharm)$"
+    open-maximized true
+    open-focused true
 }
+// window-rule {
+//     match title="^*-float$"
+//     open-floating true
+//     default-column-width  { fixed 1280; }
+//     default-window-height { fixed 720; }
+// }
 
 layer-rule {
     match namespace="^swww-daemon$"
@@ -99,6 +104,10 @@ layer-rule {
 layer-rule {
     match namespace="^waybar$"
     opacity 0.75
+}
+layer-rule {
+    match namespace="^quickshell-overview$"
+    place-within-backdrop true
 }
 layer-rule {
     match namespace="^dms$"
