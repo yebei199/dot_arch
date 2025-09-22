@@ -2,6 +2,7 @@
 export ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
+bindkey -v
 source $ZSH/oh-my-zsh.sh
 
 fpath+=(/usr/share/zsh/site-functions)
@@ -12,6 +13,15 @@ compinit
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Keep this as last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# 高级 vim 模式插件
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 eval "$(starship init zsh)"
