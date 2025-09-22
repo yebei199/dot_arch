@@ -61,8 +61,8 @@ input {
     }
 
 
-    warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="100%"
+    // warp-mouse-to-focus
+    // focus-follows-mouse max-scroll-amount="100%"
       workspace-auto-back-and-forth
 
 }
@@ -258,8 +258,9 @@ binds {
     // You can set a cooldown on any bind, but it's most useful for the wheel.
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-column-left-or-last; }
-    Mod+Shift+WheelScrollUp   cooldown-ms=150 { focus-column-right-or-first; }
+    // Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-column-left-or-last; }
+    Mod+Shift+WheelScrollUp   cooldown-ms=150 { focus-column-left; }
+    Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-column-right; }
 
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
