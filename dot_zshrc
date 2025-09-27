@@ -1,8 +1,8 @@
 # Arch + oh-my-zsh（系统包）
 export ZSH=/usr/share/oh-my-zsh
+export PATH="$HOME/.bun/bin:$PATH"
 ZSH_THEME="robbyrussell"
 plugins=(git)
-bindkey -v
 source $ZSH/oh-my-zsh.sh
 
 fpath+=(/usr/share/zsh/site-functions)
@@ -13,8 +13,7 @@ compinit
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Keep this as last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# 高级 vim 模式插件
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -25,3 +24,5 @@ function y() {
 }
 
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+
