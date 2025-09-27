@@ -65,7 +65,7 @@ input {
 
 
     warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="80%"
+    focus-follows-mouse max-scroll-amount="90%"
       workspace-auto-back-and-forth
 
 }
@@ -83,11 +83,16 @@ window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
 }
+window-rule {
+    match app-id="google-chrome"
+    // open-maximized true
+    default-column-width  { fixed 1980; }
+}
 
 window-rule {
-    match title="^(WebStorm|Pycharm)$"
+    match app-id="^(WebStorm|Pycharm)$"
     open-maximized true
-    open-focused true
+    // open-focused true
 }
 // window-rule {
 //     match title="^*-float$"
@@ -107,10 +112,6 @@ layer-rule {
 layer-rule {
     match namespace="^waybar$"
     opacity 0.75
-}
-layer-rule {
-    match namespace="^quickshell-overview$"
-    place-within-backdrop true
 }
 layer-rule {
     match namespace="^dms$"
