@@ -27,4 +27,26 @@ nnoremap <C-a> GVgg
 inoremap <C-j> <Esc>
 vnoremap <C-j> <Esc>
 
-set clipboard+=unnamed
+" 让所有的 y/p/d 都使用系统剪切板
+set clipboard=unnamedplus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
