@@ -65,8 +65,10 @@ input {
 
 
     warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="90%"
-      workspace-auto-back-and-forth
+    focus-follows-mouse max-scroll-amount="100%"
+
+    // switching to the same workspace by index twice will switch back to the previous workspace. 
+    // workspace-auto-back-and-forth
 
 }
 
@@ -86,7 +88,7 @@ window-rule {
 window-rule {
     match app-id="google-chrome"
     // open-maximized true
-    default-column-width  { fixed 1980; }
+    default-column-width  {proportion 0.99;}
 }
 
 window-rule {
