@@ -26,3 +26,4 @@ export all_proxy="socks5://127.0.0.1:7897"
 
 
 
+. "$HOME/.cargo/env"
