@@ -17,8 +17,11 @@ set  multiple-cursors
 set  commentary
 set incsearch
 
-map f <Plug>(easymotion-s)
-map F <Plug>(easymotion-s2)
+nmap f <Action>(flash.search)
+xmap F <Action>(flash.search)
+
+"map f <Plug>(easymotion-s)
+"map F <Plug>(easymotion-s2)
 map L $
 map H ^
 
