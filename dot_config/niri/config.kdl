@@ -92,7 +92,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^(WebStorm|Pycharm)$"
+    match app-id="^(WebStorm|Pycharm|RustRover)$"
     open-maximized true
     // open-focused true
 }
