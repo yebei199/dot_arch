@@ -94,6 +94,7 @@ window-rule {
 window-rule {
     match app-id="^(WebStorm|Pycharm|RustRover)$"
     open-maximized true
+    default-column-width  {proportion 0.99;}
     // open-focused true
 }
 // window-rule {
@@ -127,8 +128,8 @@ layout {
     background-color "transparent"
     gaps 4
     always-center-single-column
-    center-focused-column "always"
-    // center-focused-column "never"
+    // center-focused-column "always"
+    center-focused-column "never"
 
     preset-column-widths {
         proportion 0.5
