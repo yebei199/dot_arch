@@ -93,7 +93,7 @@ window-rule {
 
 window-rule {
     match app-id="^(WebStorm|Pycharm|RustRover)$"
-    open-maximized true
+    // open-maximized true
     default-column-width  {proportion 0.99;}
     // open-focused true
 }
