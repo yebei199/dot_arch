@@ -227,7 +227,7 @@ binds {
       spawn "dms" "ipc" "call" "night" "toggle";
    }
 
-    Mod+T   hotkey-overlay-title="Open a Terminal: kitty"      { spawn "kitty"; }
+    Mod+T   hotkey-overlay-title="Open a Terminal"   { spawn "ghostty"; }
 
     Mod+Q { close-window; }
 
