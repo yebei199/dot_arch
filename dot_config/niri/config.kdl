@@ -35,6 +35,7 @@ environment {
     // DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     EDITOR "nvim"
+
     XMODIFIERS "@im=fcitx"
     GTK_IM_MODULE "fcitx"
     QT_IM_MODULE "fcitx"
@@ -42,6 +43,21 @@ environment {
     http_proxy "http://127.0.0.1:7897"
     https_proxy "http://127.0.0.1:7897"
     all_proxy "socks5://127.0.0.1:7897"
+
+    XDG_CURRENT_DESKTOP "Niri"
+  XDG_SESSION_TYPE "wayland"
+  XDG_SESSION_DESKTOP "Niri"
+
+
+  // QT
+  QT_AUTO_SCREEN_SCALE_FACTOR "1"
+  QT_STYLE_OVERRIDE "kvantum"
+
+  // GTK
+  GDK_SCALE "1"
+  GDK_BACKEND "wayland,x11,*"
+  SDL_VIDEODRIVER "wayland"
+  CLUTTER_BACKEND "wayland"
      
 
 }
