@@ -45,10 +45,14 @@ environment {
     https_proxy "http://127.0.0.1:7897"
     all_proxy "socks5://127.0.0.1:7897"
 
-    XDG_CURRENT_DESKTOP "Niri"
-  XDG_SESSION_TYPE "wayland"
-  XDG_SESSION_DESKTOP "Niri"
+    ELECTRON_ENABLE_WAYLAND "1"
+    ELECTRON_ENABLE_WAYLAND_IME "1"
+    ELECTRON_WAYLAND_TEXT_INPUT_VERSION "3"
 
+
+    XDG_CURRENT_DESKTOP "Niri"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "Niri"
 
   // QT
   QT_AUTO_SCREEN_SCALE_FACTOR "1"
@@ -59,7 +63,6 @@ environment {
   GDK_BACKEND "wayland,x11,*"
   SDL_VIDEODRIVER "wayland"
   CLUTTER_BACKEND "wayland"
-     
 
 }
 animations {
