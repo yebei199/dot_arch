@@ -145,15 +145,19 @@
   "appLauncherViewMode": "grid",
   "spotlightModalViewMode": "grid",
   "networkPreference": "auto",
-  "iconTheme": "System Default",
-  "useOSLogo": true,
-  "osLogoColorOverride": "",
-  "osLogoBrightness": 0.5,
-  "osLogoContrast": 1,
+  "iconTheme": "Tela-circle-pink",
+  "launcherLogoMode": "os",
+  "launcherLogoCustomPath": "",
+  "launcherLogoColorOverride": "",
+  "launcherLogoColorInvertOnMode": false,
+  "launcherLogoBrightness": 0.5,
+  "launcherLogoContrast": 1,
+  "launcherLogoSizeOffset": 0,
   "fontFamily": "Inter Variable",
   "monoFontFamily": "Fira Code",
   "fontWeight": 400,
   "fontScale": 1,
+  "dankBarFontScale": 1,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -180,7 +184,8 @@
   "dankBarSquareCorners": false,
   "dankBarNoBackground": true,
   "dankBarGothCornersEnabled": false,
-  "dankBarPosition": 0,
+  "dankBarBorderEnabled": false,
+  "dankBarPosition": 2,
   "lockScreenShowPowerActions": true,
   "hideBrightnessSlider": false,
   "widgetBackgroundColor": "sch",
@@ -189,6 +194,7 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
+  "osdAlwaysShowValue": false,
   "screenPreferences": {
     "wallpaper": [
       "all"
@@ -198,5 +204,5 @@
     ],
     "osd": []
   },
-  "animationSpeed": 3
+  "animationSpeed": 4
 }
