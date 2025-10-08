@@ -5,6 +5,7 @@ spawn-at-startup "dms" "run"
 // spawn-at-startup "swww-daemon"
 spawn-at-startup "/opt/v2rayn-bin/v2rayN"
 spawn-sh-at-startup "pgrep -x xremap >/dev/null || xremap ~/.config/xremap/config.yml"
+spawn-sh-at-startup "vicinae server"
     
 config-notification {
     disable-failed
@@ -203,7 +204,8 @@ binds {
 
   Mod+A hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle";
    }
-    Mod+Space         hotkey-overlay-title="Run an Application: fuzzel"             { spawn "fuzzel"; }
+    // Mod+Space         hotkey-overlay-title="Run an Application"             { spawn "fuzzel"; }
+    Mod+Space         hotkey-overlay-title="Run an Application"             { spawn-sh "vicinae toggle"; }
 
    Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle";
    }
