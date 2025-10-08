@@ -22,3 +22,6 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+fish_vi_key_bindings
+
